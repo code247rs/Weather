@@ -20,7 +20,7 @@ jobs:
       uses: docker/login-action@v3
       with:
         username: ${{secrets.docker_username}}
-        password: ${{secrets.docker_pass}}
+        password: ${{secrets.docker_key}}
     - name: Build docker
       run: docker build -t ${{ secrets.DOCKER_USERNAME }}/weather-app .
 
