@@ -1,0 +1,8 @@
+---
+
+services:
+  web:
+    image: alndsrood/weather-app
+    platform: linux/amd64
+    ports:
+      - "5001:5001"
