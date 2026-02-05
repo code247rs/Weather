@@ -21,8 +21,13 @@ jobs:
       with:
         username: ${{secrets.docker_username}}
         password: ${{secrets.docker_key}}
-    - name: Build docker
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/weather-app .
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        push: true
+        tags: user/app:latest
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/weather-app
+      
