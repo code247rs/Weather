@@ -6,8 +6,8 @@
     <title>Weather</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body style="background-color: bisque;">
-    <form action="/" method="POST">
+<body style="background-color: bisque; font-family: Arial, sans-serif;">
+    <form action="/" method="POST" style="position: fixed; top: 50vh; left: 50vw;">
         <label for="city">Enter City:</label>
         <input type="text" id="city" name="city" required>
         <button type="submit">Get Weather</button>
