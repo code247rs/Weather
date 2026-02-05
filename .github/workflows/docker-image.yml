@@ -26,7 +26,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: user/app:latest
+        tags: alndsrood/weather-app:latest
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/weather-app
