@@ -12,10 +12,12 @@
         <input type="text" id="city" name="city" required>
         <button type="submit">Get Weather</button>
     </form>
+    <div style="padding-left: 2rem; color: wheat;">
     {% if weather %}
         <h2>City: {{ weather.city }}</h2>
         <p>Temperature: {{ weather.temperature }} °C</p>
         <p>Condition: {{ weather.condition }}</p>
     {% endif %}
+    </div>
 </body>
 </html>
